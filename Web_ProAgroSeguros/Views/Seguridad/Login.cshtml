@@ -1,0 +1,42 @@
+﻿@model Web_ProAgroSeguros.Models.Credencial
+
+@{ Layout = "_LayoutEmtpy"; }
+<div class="login-box">
+    <div class="card w-50 mx-auto">
+        <div class="card-header">
+            Web ProAgroSeguros
+        </div>
+        <div class="card-body login-card-body">
+            <div class="card-header">
+                <img src="~/img/logo.png" alt="Pro Agro" />
+            </div>
+                <form asp-controller="Seguridad" asp-action="Login">
+                    <div class="input-group mb-3">
+                        <input asp-for="RFC" class="form-control" placeholder="RFC">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fa fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input asp-for="Contrasenia" type="password" class="form-control" placeholder="Contraseña">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fa fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-success btn-block">Ingresar</button>
+                    </div>
+                </form>
+
+            </div>
+        
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

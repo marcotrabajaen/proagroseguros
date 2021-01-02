@@ -1,0 +1,25 @@
+﻿@{ Layout = "_LayoutEmtpy"; }
+<div class="login-box">
+    <div class="card w-50 mx-auto">
+        <div class="card-header">
+            Web ProAgroSeguros
+        </div>
+        <div class="card-body login-card-body">
+            <div class="card-header">
+                <img src="~/img/logo.png" alt="Pro Agro" />
+            </div>
+            <div class="card-body">
+                <h1>
+                    Gracias por tu visita!!!
+                </h1>
+                <h5>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Seguridad" asp-action="Login">Autenticarse otra vez</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
